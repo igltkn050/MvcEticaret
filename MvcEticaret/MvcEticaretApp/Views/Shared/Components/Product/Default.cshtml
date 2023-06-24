@@ -1,0 +1,15 @@
+﻿@model Product;
+
+<div class="card">
+    <img src="@Model.ImageUrl" alt="@Model.Title" class="card-img-top" style="width: 50px; height: 50px;>
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <p class="card-text">Price: @Model.Price</p>
+        <p class="card-text">Star Count: @Model.StarCount</p>
+        @if (Model.IsSale)
+        {
+            <p class="card-text">Old Price: <del>@Model.OldPrice</del></p>
+            <span class="badge badge-danger">Sale</span>
+        }
+    </div>
+</div>
